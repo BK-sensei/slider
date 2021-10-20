@@ -55,9 +55,9 @@ $(function(){
     // Bonus 2
     var count = 0
 
-    setInterval(sliding, 5000)
+    setInterval(autoslide, 5000)
     
-    function sliding() {
+    function autoslide() {
         count = count - 1
         if (count === -5) {
             count = 0
