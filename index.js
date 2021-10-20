@@ -1,5 +1,6 @@
 $(function(){
 
+
     // Slider entre les images grâce aux points
     $(".point").click(function() {
         var slideLeft = $(this).index() * 100
@@ -50,4 +51,23 @@ $(function(){
                 left: `-${numArrow *100}%`
         }, 1000)
     })
+
+    // Bonus 2
+    var count = 0
+
+    setInterval(sliding, 5000)
+    
+    function sliding() {
+        count = count - 1
+        if (count === -5) {
+            count = 0
+        }
+        if (count === 1) {
+            count = -4
+        }
+        $(".slider").animate({
+            left: `${count*100}%`
+        })
+    }
+
 })
