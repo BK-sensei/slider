@@ -16,8 +16,14 @@ $(function(){
         
         numArrow = numArrow + 1
         
+        // Exercice : être bloquer sur la dernière slide quand on clique sur la flêche de droite
+        // if (numArrow > 4){
+        //     numArrow = 4
+        // }
+
+        // Bonus 1
         if (numArrow > 4){
-            numArrow = 4
+            numArrow = 0
         }
 
             $(".slider").animate({
@@ -30,8 +36,14 @@ $(function(){
 
         numArrow = numArrow - 1
 
+        // Exercice : être bloquer sur la 1ère slide quand on clique sur la flêche de gauche
+        // if (numArrow < 0){
+        //     numArrow = 0
+        // }
+
+        // Bonus 1
         if (numArrow < 0){
-            numArrow = 0
+            numArrow = 4
         }
 
         $(".slider").animate({
