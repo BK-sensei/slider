@@ -38,9 +38,9 @@ $(function(){
         numArrow = numArrow - 1
 
         // Exercice : être bloquer sur la 1ère slide quand on clique sur la flêche de gauche
-        // if (numArrow < 0){
-        //     numArrow = 0
-        // }
+        if (numArrow < 0){
+            numArrow = 0
+        } 
 
         // Bonus 1
         if (numArrow < 0){
@@ -59,12 +59,14 @@ $(function(){
     
     function autoslide() {
         count = count - 1
+        
         if (count === -5) {
             count = 0
         }
         if (count === 1) {
             count = -4
         }
+
         $(".slider").animate({
             left: `${count*100}%`
         })
