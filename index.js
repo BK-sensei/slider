@@ -22,7 +22,7 @@ $(function(){
         //     numArrow = 4
         // }
 
-        // Bonus 1
+        // Bonus 1 : Infinite slider
         if (numArrow > 4){
             numArrow = 0
         }
@@ -38,11 +38,11 @@ $(function(){
         numArrow = numArrow - 1
 
         // Exercice : être bloquer sur la 1ère slide quand on clique sur la flêche de gauche
-        if (numArrow < 0){
-            numArrow = 0
-        } 
+        // if (numArrow < 0){
+        //     numArrow = 0
+        // } 
 
-        // Bonus 1
+        // Bonus 1 : Infinite slider
         if (numArrow < 0){
             numArrow = 4
         }
@@ -52,7 +52,7 @@ $(function(){
         }, 1000)
     })
 
-    // Bonus 2
+    // Bonus 2 : Standalone Slider
     var count = 0
 
     setInterval(autoslide, 5000)
@@ -70,6 +70,13 @@ $(function(){
         $(".slider").animate({
             left: `${count*100}%`
         })
+    }
+
+    // Bonus 3 : Random pictures
+    var random = 0
+    for (var i = 1; i <= 5; i++){
+        random = Math.random()
+        $(`.slide:nth-child(${i})`).css("background-image", `url("https://picsum.photos/1600/900?${random}")`)
     }
 
 })
